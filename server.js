@@ -20,7 +20,7 @@ var client = new Twitter({
   access_token_secret: config.access_token_secret
 });
 
-var hashtags = '#javascript, #nodejs, #angularjs, #backbone, #jquery, #mongodb, #reactjs, #html5, #python, #angular, #react, #css, #css3, #java, #typescript';
+var hashtags = '#Trump, #FeelTheBern';
 
 client.stream('statuses/filter', {track: hashtags}, function(stream) {
   stream.on('data', function(tweet) {
