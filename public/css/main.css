@@ -1,14 +1,19 @@
 body {
- background-color: #c2c6a6;
+ background-color: rgb(95, 165, 218);
 }
 #trump #sanders {
   float: right;
   width: 110% !important;
   height: 110% !important;
 }
-.top {
-  margin-top: 50px !important;
+
+.name {
+  font-weight:bold;
+  font-size:30px;
+  float: right;
 }
+
+
 .img {
   width: 150%;
   height: 150%;
