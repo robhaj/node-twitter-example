@@ -1,6 +1,7 @@
 body {
  background-color: rgb(95, 165, 218);
 }
+
 #trump #sanders {
   float: right;
   width: 110% !important;
@@ -12,7 +13,6 @@ body {
   font-size:30px;
   float: right;
 }
-
 
 .img {
   width: 150%;

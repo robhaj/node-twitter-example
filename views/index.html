@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 
 {% block content %}
+
 <div ng-app='myApp' ng-controller="mainCtrl">
   <div class='row' style='margin-top: 50px'>
     <div class='col-md-2 col-lg-4'>
@@ -10,7 +11,7 @@
       <span class='name'>#Trump</span>
       <canvas id="trump" class="chart chart-doughnut"
       chart-colours='colors' chart-legend="true"
-      chart-data="sandersData" chart-labels="labels">
+      chart-data="trumpData" chart-labels="labels">
     </canvas>
   </div>
   <div class='col-md-2 col-lg-4'>
@@ -20,7 +21,7 @@
     <span class='name'>#FeelTheBern</span>
     <canvas id="sanders" class="chart chart-doughnut"
     chart-colours='colors' chart-legend="true"
-    chart-data="trumpData" chart-labels="labels">
+    chart-data="sandersData" chart-labels="labels">
   </canvas>
 </div>
 </div>
@@ -38,7 +39,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-12">
-                      {{tweet}}
+                    {{tweet}}
                 </div>
               </div>
             </div>

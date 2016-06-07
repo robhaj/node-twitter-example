@@ -10,7 +10,6 @@ var server = app.listen(3000, function () {
   console.log('The server is listening on port 3000');
 });
 
-
 var io = require('socket.io').listen(server);
 
 var client = new Twitter({
