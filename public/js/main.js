@@ -8,7 +8,7 @@ function ($scope, socket) {
   $scope.colors = ['#6c6a6c','#000000','#7FFD1F','#EC872A', '#9527C2'];
   //intial data values
   $scope.trumpData = [0,0,0,0,0];
-  $scope.sandersData = [0,0,0,0,0];
+  $scope.clintonData = [0,0,0,0,0];
 
   socket.on('newTweet', function (tweet) {
     $scope.tweet = tweet.text
@@ -21,7 +21,7 @@ function ($scope, socket) {
     })
 
     //check source and increment for #trump tweets
-    if (hashtags.indexOf('trump') !== -1){
+    if (hashtags.includes('trump')) {
       switch (source) {
         case 'iPhone': $scope.trumpData[0]++
         break;
@@ -35,18 +35,18 @@ function ($scope, socket) {
       }
     }
 
-    //check source and increment for #feelthebern tweets
-    else if (hashtags.indexOf('feelthebern') !== -1) {
+    //check source and increment for #strongertogether tweets
+    else if (hashtags.includes('strongertogether')) {
       switch (source) {
-        case 'iPhone': $scope.sandersData[0]++
+        case 'iPhone': $scope.clintonData[0]++
         break;
-        case 'iPad': $scope.sandersData[1]++
+        case 'iPad': $scope.clintonData[1]++
         break;
-        case 'Android': $scope.sandersData[2]++
+        case 'Android': $scope.clintonData[2]++
         break;
-        case 'Web': $scope.sandersData[3]++
+        case 'Web': $scope.clintonData[3]++
         break;
-        default: $scope.sandersData[4]++
+        default: $scope.clintonData[4]++
       }
     }
   });
